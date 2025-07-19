@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анализатор даты рождения</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background">
+        <div class="floating-shapes">
+            <div class="shape shape1"></div>
+            <div class="shape shape2"></div>
+            <div class="shape shape3"></div>
+            <div class="shape shape4"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <h1 class="title">
+                <span class="icon">🎂</span>
+                Анализатор даты рождения
+            </h1>
+            
+            <form id="birthdayForm" class="form">
+                <div class="input-group">
+                    <label for="day">День рождения</label>
+                    <input type="number" id="day" min="1" max="31" placeholder="Например: 15" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="month">Месяц</label>
+                    <select id="month" required>
+                        <option value="">Выберите месяц</option>
+                        <option value="1">Январь</option>
+                        <option value="2">Февраль</option>
+                        <option value="3">Март</option>
+                        <option value="4">Апрель</option>
+                        <option value="5">Май</option>
+                        <option value="6">Июнь</option>
+                        <option value="7">Июль</option>
+                        <option value="8">Август</option>
+                        <option value="9">Сентябрь</option>
+                        <option value="10">Октябрь</option>
+                        <option value="11">Ноябрь</option>
+                        <option value="12">Декабрь</option>
+                    </select>
+                </div>
+                
+                <div class="input-group">
+                    <label for="year">Год рождения</label>
+                    <input type="number" id="year" min="1900" max="2025" placeholder="Например: 1990" required>
+                </div>
+                
+                <button type="submit" class="btn-submit">
+                    <span>Анализировать</span>
+                    <div class="btn-glow"></div>
+                </button>
+            </form>
+            
+            <div id="results" class="results hidden">
+                <div class="result-item">
+                    <div class="result-icon">📅</div>
+                    <div class="result-content">
+                        <h3>День недели</h3>
+                        <p id="dayOfWeek"></p>
+                    </div>
+                </div>
+                
+                <div class="result-item">
+                    <div class="result-icon">🗓️</div>
+                    <div class="result-content">
+                        <h3>Год</h3>
+                        <p id="leapYear"></p>
+                    </div>
+                </div>
+                
+                <div class="result-item">
+                    <div class="result-icon">🎈</div>
+                    <div class="result-content">
+                        <h3>Возраст</h3>
+                        <p id="age"></p>
+                    </div>
+                </div>
+                
+                <div class="console-note">
+                    <span class="console-icon">💻</span>
+                    Откройте консоль браузера (F12), чтобы увидеть дату звездочками!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
